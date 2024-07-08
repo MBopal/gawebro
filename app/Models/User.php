@@ -45,4 +45,24 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function wallet()
+    {
+        return $this->hasOne(Wallet::class);
+    }
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class, 'client_id', 'id')->orderByDesc('id');
+    }
+
+    public function proposals()
+    {
+        return $this->hasMany(ProjectApplicant::class, 'freelancer_id', 'id')->orderByDesc('id');
+    }
+
+    public function hasAplliedToProject($projectId)
+    {
+        return ProjectApplicant::where('project_id', $projectId)->where('freelancer_id', $this->id)->exists();
+    }
 }
