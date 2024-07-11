@@ -26,8 +26,8 @@ Route::middleware('auth')->group(function () {
 
     Route::middleware('can:withdraw wallet')->group(function () {
         Route::get('/dashboard/wallet', [DashboardController::class, 'wallet'])->name('dashboard.wallet');
-        Route::get('/dashboard/wallet/withdraw', [DashboardController::class, 'wallet'])->name('dashboard.wallet.withdraw');
-        Route::post('/dashboard/wallet/withdraw/store', [DashboardController::class, 'wallet'])->name('dashboard.wallet.withdraw.store');
+        Route::get('/dashboard/wallet/withdraw', [DashboardController::class, 'withdraw_wallet'])->name('dashboard.wallet.withdraw');
+        Route::post('/dashboard/wallet/withdraw/store', [DashboardController::class, 'withdraw_wallet_store'])->name('dashboard.wallet.withdraw.store');
     });
 
     Route::middleware('can:topup wallet')->group(function () {
