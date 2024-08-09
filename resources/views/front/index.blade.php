@@ -16,7 +16,7 @@
                         class="appearance-none outline-none focus:outline-none font-semibold placeholder:font-normal placeholder:text-[#545768] w-full"
                         placeholder="Do quick search job by name...">
                     <button class="w-9 h-9 flex shrink-0">
-                        <img src="assets/icons/search.svg" alt="icon">
+                        <img src="{{ asset('assets/icons/search.svg') }}" alt="icon">
                     </button>
                 </div>
                 <div class="h-[52px] w-0 border border-[#DCDAE3] hidden sm:block"></div>
@@ -79,20 +79,20 @@
                                     {{ $project->name }}</p>
                                 <div class="flex items-center gap-[6px]">
                                     <div>
-                                        <img src="assets/icons/dollar-circle.svg" alt="icon">
+                                        <img src="{{ asset('assets/icons/dollar-circle.svg') }}" alt="icon">
                                     </div>
                                     <p class="font-semibold text-sm">Rp {{ number_format($project->budget, 0, ',', '.') }}
                                     </p>
                                 </div>
                                 <div class="flex items-center gap-[6px]">
                                     <div>
-                                        <img src="assets/icons/verify.svg" alt="icon">
+                                        <img src="{{ asset('assets/icons/verify.svg') }}" alt="icon">
                                     </div>
                                     <p class="font-semibold text-sm">Payment Verified</p>
                                 </div>
                                 <div class="flex items-center gap-[6px]">
                                     <div>
-                                        <img src="assets/icons/crown.svg" alt="icon">
+                                        <img src="{{ asset('assets/icons/crown.svg') }}" alt="icon">
                                     </div>
                                     <p class="font-semibold text-sm">{{ $project->skill_level }}</p>
                                 </div>
@@ -143,20 +143,20 @@
                                 <div class="flex flex-col sm:flex-row sm:items-center gap-3">
                                     <div class="flex items-center gap-[6px]">
                                         <div>
-                                            <img src="assets/icons/dollar-circle.svg" alt="icon">
+                                            <img src="{{ asset('assets/icons/dollar-circle.svg') }}" alt="icon">
                                         </div>
                                         <p class="font-semibold text-sm">Rp
                                             {{ number_format($project->budget, 0, ',', '.') }}</p>
                                     </div>
                                     <div class="flex items-center gap-[6px]">
                                         <div>
-                                            <img src="assets/icons/verify.svg" alt="icon">
+                                            <img src="{{ asset('assets/icons/verify.svg') }}" alt="icon">
                                         </div>
                                         <p class="font-semibold text-sm">Payment Verified</p>
                                     </div>
                                     <div class="flex items-center gap-[6px]">
                                         <div>
-                                            <img src="assets/icons/crown.svg" alt="icon">
+                                            <img src="{{ asset('assets/icons/crown.svg') }}" alt="icon">
                                         </div>
                                         <p class="font-semibold text-sm">{{ $project->skill_level }}</p>
                                     </div>
@@ -185,19 +185,19 @@
                         <div class="flex items-center gap-[6px]">
                             <div class="flex items-center">
                                 <div>
-                                    <img src="assets/icons/Star.svg" alt="star">
+                                    <img src="{{ asset('assets/icons/Star.svg') }}" alt="star">
                                 </div>
                                 <div>
-                                    <img src="assets/icons/Star.svg" alt="star">
+                                    <img src="{{ asset('assets/icons/Star.svg') }}" alt="star">
                                 </div>
                                 <div>
-                                    <img src="assets/icons/Star.svg" alt="star">
+                                    <img src="{{ asset('assets/icons/Star.svg') }}" alt="star">
                                 </div>
                                 <div>
-                                    <img src="assets/icons/Star.svg" alt="star">
+                                    <img src="{{ asset('assets/icons/Star.svg') }}" alt="star">
                                 </div>
                                 <div>
-                                    <img src="assets/icons/Star-grey.svg" alt="star">
+                                    <img src="{{ asset('assets/icons/Star-grey.svg') }}" alt="star">
                                 </div>
                                 <p class="font-semibold text-sm">(893)</p>
                             </div>
@@ -206,7 +206,7 @@
                     <div class="flex flex-col gap-[10px] rounded-[20px] p-[10px_14px] bg-[#030303]">
                         <div class="flex items-center gap-3">
                             <div class="w-8 h-8 flex shrink-0">
-                                <img src="assets/icons/story.svg" alt="">
+                                <img src="{{ asset('assets/icons/story.svg') }}" alt="">
                             </div>
                             <p class="text-sm text-white">You have <span class="font-bold">{{ Auth::user()->connect }}</span>
                                 connects available to
@@ -224,7 +224,7 @@
                         <a href="" class="resources-card">
                             <div class="group flex gap-3 items-center">
                                 <div class="w-[50px] h-[50px] flex shrink-0">
-                                    <img src="assets/icons/perosnalcard.svg" alt="icon">
+                                    <img src="{{ asset('assets/icons/perosnalcard.svg') }}" alt="icon">
                                 </div>
                                 <div class="flex flex-col justify-center gap-[2px]">
                                     <p class="font-semibold group-hover:underline">Gawe Academy</p>
@@ -235,7 +235,7 @@
                         <a href="" class="resources-card">
                             <div class="group flex gap-3 items-center">
                                 <div class="w-[50px] h-[50px] flex shrink-0">
-                                    <img src="assets/icons/note-add.svg" alt="icon">
+                                    <img src="{{ asset('assets/icons/note-add.svg') }}" alt="icon">
                                 </div>
                                 <div class="flex flex-col justify-center gap-[2px]">
                                     <p class="font-semibold group-hover:underline">Invoice Marker</p>
@@ -246,7 +246,7 @@
                         <a href="" class="resources-card">
                             <div class="group flex gap-3 items-center">
                                 <div class="w-[50px] h-[50px] flex shrink-0">
-                                    <img src="assets/icons/ruler&pen.svg" alt="icon">
+                                    <img src="{{ asset('assets/icons/ruler&pen.svg') }}" alt="icon">
                                 </div>
                                 <div class="flex flex-col justify-center gap-[2px]">
                                     <p class="font-semibold group-hover:underline">Assets Pixels Pro</p>
@@ -257,7 +257,7 @@
                         <a href="" class="resources-card">
                             <div class="group flex gap-3 items-center">
                                 <div class="w-[50px] h-[50px] flex shrink-0">
-                                    <img src="assets/icons/code.svg" alt="icon">
+                                    <img src="{{ asset('assets/icons/code.svg') }}" alt="icon">
                                 </div>
                                 <div class="flex flex-col justify-center gap-[2px]">
                                     <p class="font-semibold group-hover:underline">Codelab Testing Unit</p>
@@ -268,7 +268,7 @@
                         <a href="" class="resources-card">
                             <div class="group flex gap-3 items-center">
                                 <div class="w-[50px] h-[50px] flex shrink-0">
-                                    <img src="assets/icons/user-octagon.svg" alt="icon">
+                                    <img src="{{ asset('assets/icons/user-octagon.svg') }}" alt="icon">
                                 </div>
                                 <div class="flex flex-col justify-center gap-[2px]">
                                     <p class="font-semibold group-hover:underline">Interview Mocking</p>
