@@ -40,7 +40,7 @@
                         @endif
                     @endif
                     <h1 class="font-extrabold text-[30px] leading-[45px]">{{ $project->name }}</h1>
-                    <p class="text-sm text-[#545768]">Posted at {{ $project->created_at->format('D M Y') }}</p>
+                    <p class="text-sm text-[#545768]">Posted at {{ $project->created_at->format('d M Y') }}</p>
                 </div>
                 <div class="flex flex-col gap-[6px] w-full">
                     <h3 class="font-semibold">About Project</h3>
