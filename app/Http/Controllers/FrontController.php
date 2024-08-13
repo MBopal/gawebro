@@ -20,6 +20,11 @@ class FrontController extends Controller
         return view('front.index', compact('categories', 'projects'));
     }
 
+    public function out_of_connect()
+    {
+        return view('front.out_of_connect');
+    }
+
     public function category(Category $category)
     {
         return view('front.category', compact('category'));
@@ -38,7 +43,7 @@ class FrontController extends Controller
 
         if ($user->hasAplliedToProject($project->id)) return redirect()->route('dashboard.proposals');
 
-        if ($user->connect = 0) return redirect()->route('front.out_of_connect');
+        if ($user->connect == 0) return redirect()->route('front.out_of_connect');
 
         if ($project->has_started) return redirect()->route('front.details', $project->slug);
 
@@ -49,7 +54,7 @@ class FrontController extends Controller
     {
         $user = Auth::user();
 
-        if ($user->connect = 0) {
+        if ($user->connect == 0) {
             return redirect()->route('front.out_of_connect');
         } else {
             $user->decrement('connect', 1);
