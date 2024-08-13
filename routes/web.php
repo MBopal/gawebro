@@ -50,7 +50,7 @@ Route::middleware('auth')->group(function () {
         });
 
         Route::middleware('can:manage applicants')->group(function () {
-            Route::resource('projectc_applicants', ProjectApplicantController::class);
+            Route::resource('project_applicants', ProjectApplicantController::class);
         });
 
         Route::middleware('can:manage projects')->group(function () {
