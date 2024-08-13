@@ -119,18 +119,22 @@
                                 class="bg-[#6635F1] p-[14px_20px] rounded-full font-semibold text-white text-center">View
                                 Proposal</a>
                         @else
-                            <a href="{{ route('front.apply_job', $project->slug) }}"
-                                class="bg-[#6635F1] p-[14px_20px] rounded-full font-semibold text-white text-center">Apply
-                                Now</a>
+                            @if (!$project->has_finished)
+                                <a href="{{ route('front.apply_job', $project->slug) }}"
+                                    class="bg-[#6635F1] p-[14px_20px] rounded-full font-semibold text-white text-center">Apply
+                                    Now</a>
+                            @endif
                         @endif
                     @endauth
 
 
                     @guest
                         @if (!$project->has_started)
-                            <a href="{{ route('front.apply_job', $project->slug) }}"
-                                class="bg-[#6635F1] p-[14px_20px] rounded-full font-semibold text-white text-center">Apply
-                                Now</a>
+                            @if (!$project->has_finished)
+                                <a href="{{ route('front.apply_job', $project->slug) }}"
+                                    class="bg-[#6635F1] p-[14px_20px] rounded-full font-semibold text-white text-center">Apply
+                                    Now</a>
+                            @endif
                         @endif
                     @endguest
 

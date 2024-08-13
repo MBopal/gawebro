@@ -35,18 +35,17 @@
                         </div>
                     </div>
                     <div class="flex flex-row gap-x-5">
-
                         <a href="{{ route('dashboard.wallet.withdraw') }}"
                             class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
                             Request Withdraw
                         </a>
 
-
-                        <a href="{{ route('dashboard.wallet.topup') }}"
-                            class="font-bold py-4 px-6 bg-green-700 text-white rounded-full">
-                            Topup Wallet
-                        </a>
-
+                        @can('topup wallet')
+                            <a href="{{ route('dashboard.wallet.topup') }}"
+                                class="font-bold py-4 px-6 bg-green-700 text-white rounded-full">
+                                Topup Wallet
+                            </a>
+                        @endcan
                     </div>
                 </div>
                 <hr class="my-5">
